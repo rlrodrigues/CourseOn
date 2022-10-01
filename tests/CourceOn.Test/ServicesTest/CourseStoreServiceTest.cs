@@ -1,13 +1,11 @@
-﻿using CourseOn.Domain.Enum;
+﻿using CourseOn.Domain.Dto;
+using CourseOn.Domain.Enum;
+using CourseOn.Domain.Interfaces;
 using CourseOn.Domain.Model;
+using CourseOn.Domain.Services;
 using CourseOn.Test.Builders;
 using CourseOn.Test.Util;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CourseOn.Test.ServicesTest
 {
@@ -48,44 +46,6 @@ namespace CourseOn.Test.ServicesTest
             _courseRepositoryMock.Setup(c => c.GetByName(_courseDto.Name)).Returns(courseAlreadySaved);
 
             Assert.Throws<ArgumentException>(() => _courseStoreService.Store(_courseDto)).WithMessage("Course Already Saved.");
-            
         }
-    }
-
-    public class CourseStoreService
-    {
-        private readonly ICourseRepository _courseRepository;
-
-        public CourseStoreService(ICourseRepository courseRepository)
-        {
-            _courseRepository = courseRepository;
-        }
-
-        public void Store(CourseDto courseDto)
-        {
-            var courseAlreadySaved = _courseRepository.GetByName(courseDto.Name);
-
-            if (courseAlreadySaved != null)
-                throw new ArgumentException("Course Already Saved.");
-
-            var course = new Course(courseDto.Name, courseDto.Workload, (TargetAudience)courseDto.TargetAudience, courseDto.Price);
-
-            _courseRepository.Add(course);
-        }
-    }
-
-    public class CourseDto
-    {
-        public string Name { get; set; }
-        public int Workload { get; set; }
-        public double Price { get; set; }
-        public TargetAudience TargetAudience { get; set; }
-    }
-
-    public interface ICourseRepository
-    {
-        void Add(Course course);
-        void Update(Course course);
-        Course GetByName(string name);
     }
 }
