@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CourseOn.Test", "tests\Cour
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CourseOn.Domain", "src\CourseOn.Domain\CourseOn.Domain.csproj", "{3E2228F6-6C3C-4E72-AA4D-522CB19C8FFF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CourseOn.API", "src\CourseOn.API\CourseOn.API.csproj", "{8254A0DC-097D-423B-8614-444A7D901DA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseOn.Infrastructure", "CourseOn.Infrastructure\CourseOn.Infrastructure.csproj", "{27C10527-999C-49AC-AAC2-4A74C90F5D1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{3E2228F6-6C3C-4E72-AA4D-522CB19C8FFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E2228F6-6C3C-4E72-AA4D-522CB19C8FFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E2228F6-6C3C-4E72-AA4D-522CB19C8FFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8254A0DC-097D-423B-8614-444A7D901DA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8254A0DC-097D-423B-8614-444A7D901DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8254A0DC-097D-423B-8614-444A7D901DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8254A0DC-097D-423B-8614-444A7D901DA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27C10527-999C-49AC-AAC2-4A74C90F5D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27C10527-999C-49AC-AAC2-4A74C90F5D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27C10527-999C-49AC-AAC2-4A74C90F5D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27C10527-999C-49AC-AAC2-4A74C90F5D1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

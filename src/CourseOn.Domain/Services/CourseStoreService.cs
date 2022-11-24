@@ -19,7 +19,7 @@ namespace CourseOn.Domain.Services
             var courseAlreadySaved = _courseRepository.GetByName(courseDto.Name);
 
             if (courseAlreadySaved != null)
-                throw new ArgumentException("Course Already Saved.");
+                throw new ArgumentException("Course already saved.");
 
             var course = new Course(courseDto.Name, courseDto.Workload, (TargetAudience)courseDto.TargetAudience, courseDto.Price);
 
