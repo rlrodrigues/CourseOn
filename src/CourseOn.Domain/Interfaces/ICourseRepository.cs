@@ -2,10 +2,8 @@
 
 namespace CourseOn.Domain.Interfaces
 {
-    public interface ICourseRepository
+    public interface ICourseRepository : IRepository<Course>
     {
-        void Add(Course course);
-        void Update(Course course);
         Course GetByName(string name);
     }
 }

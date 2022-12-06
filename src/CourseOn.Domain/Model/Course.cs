@@ -1,8 +1,9 @@
-﻿using CourseOn.Domain.Enum;
+﻿using CourseOn.Domain.Entity;
+using CourseOn.Domain.Enum;
 
 namespace CourseOn.Domain.Model
 {
-    public class Course
+    public class Course : Entitye
     {
         public Course(string name, int workload, TargetAudience targetAudience, double price)
         {
