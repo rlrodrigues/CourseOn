@@ -19,7 +19,7 @@ namespace CourseOn.Test.CourseTest
         public void MostCreateACourse()
         {
             var name = _faker.Random.Word();
-            var workload = _faker.Random.Number();
+            var workload = _faker.Random.Number(2, 20);
             var targetAudience = TargetAudience.Student;
             var price = _faker.Random.Double(100, 1000);
 

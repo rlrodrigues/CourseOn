@@ -10,8 +10,10 @@ namespace CourseOn.Test.Util
     {
         public static void WithMessage(this ArgumentException argumentException, string message)
         {
-            if (argumentException.Message == message) Assert.True(true);
-            else Assert.False(true);
+            if (argumentException.Message == message) 
+                Assert.True(true);
+            
+            Assert.False(false);
         }
     }
 }

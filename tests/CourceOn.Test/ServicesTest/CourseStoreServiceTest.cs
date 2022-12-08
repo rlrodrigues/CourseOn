@@ -45,7 +45,7 @@ namespace CourseOn.Test.ServicesTest
 
             _courseRepositoryMock.Setup(c => c.GetByName(_courseDto.Name)).Returns(courseAlreadySaved);
 
-            Assert.Throws<ArgumentException>(() => _courseStoreService.Store(_courseDto)).WithMessage("Course Already Saved.");
+            Assert.Throws<ArgumentException>(() => _courseStoreService.Store(_courseDto)).WithMessage("Course already saved.");
         }
     }
 }
