@@ -3,6 +3,6 @@
     public interface IRepository<TEntity>
     {
         void Add(TEntity entity);
-        TEntity GetById(int id);
+        TEntity GetById(int id); 
     }
 }
