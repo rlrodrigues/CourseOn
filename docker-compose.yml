@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  courseon.api:
+    image: ${DOCKER_REGISTRY-}courseonapi
+    build:
+      context: .
+      dockerfile: src/CourseOn.API/Dockerfile

@@ -17,6 +17,11 @@ namespace CourseOn.Infrastructure.Repositories
         {
             Context.Set<TEntity>().Add(entity);
         }
+        
+        public void Update(TEntity entity)
+        {
+            Context.Set<TEntity>().Update(entity);
+        }
 
         public TEntity GetById(int id)
         {
